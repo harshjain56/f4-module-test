@@ -4,7 +4,7 @@ import {IoNotifications} from "react-icons/io5"
 import {BsFillBookmarkFill} from "react-icons/bs"
 import {BiMale} from "react-icons/bi"
 import {useNavigate} from "react-router-dom"
-function Navbar(){
+function Navbar({post}){
    let navigate=useNavigate()
 
 
@@ -12,9 +12,9 @@ function Navbar(){
         <div className="navbar">
            <h2>TravelMedia.in</h2>
            <div className="navigation-display">
-            <AiFillHome onClick={()=>navigate("/")}/>
+            <AiFillHome onClick={()=>navigate("/")} />
             <IoNotifications onClick={()=>navigate("/")} />
-            <BsFillBookmarkFill onClick={()=>navigate("/")}/>
+            <BsFillBookmarkFill  onClick={()=>navigate(post?(`/item/:${post.id}`):("/"))}/>
             <BiMale onClick={()=>navigate("/")}/>
            </div>
 

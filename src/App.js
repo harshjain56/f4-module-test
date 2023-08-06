@@ -9,7 +9,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar />
+      <Navbar post={post} />
       <Routes>
          <Route path="/" element={<Home setPost={setPost} />}/>
          <Route path={`/item/:${post.id}`} element={<Postdisplay post={post} setPost={setPost}/>}/>

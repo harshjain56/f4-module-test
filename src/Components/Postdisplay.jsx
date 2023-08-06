@@ -14,7 +14,7 @@ function Postdisplay({ post, setPost }) {
                 post && (
                     <div className="postdisplay">
                         <div className="upperdiv">
-                            <button><AiOutlineArrowLeft onClick={()=>navigate("/")} /></button>
+                            <button onClick={()=>navigate("/")}><AiOutlineArrowLeft/></button>
                             <h2>Post Number {post.id}</h2>
                         </div>
 
@@ -27,8 +27,8 @@ function Postdisplay({ post, setPost }) {
                                 <button onClick={()=>setToggle(false)}>User Details</button>
 
                                  </div>
-                                 <h3>{post.title}</h3>
-                                 <h3>{toggle?(post.body):(post.userId)}</h3>
+                                 <h3>Image Title: {post.title}</h3>
+                                 <h3>{toggle?("Image Details: "):("User Details: ")}{toggle?(post.body):(post.userId)}</h3>
 
                             </div>
 
